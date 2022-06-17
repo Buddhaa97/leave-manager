@@ -12,6 +12,7 @@ function Header({currentUser}) {
             <Link to='/'><Logo/></Link>
             <Link to='/employee-listing'>Employee listing</Link>
             <Link to='/employee-filter'>Employee filter</Link>
+            <Link to='/formik-form'>Formik Form </Link>
             {
                 currentUser ?
                     <div onClick={() => auth.signOut()}>Sign out</div>
