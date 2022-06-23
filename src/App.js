@@ -8,8 +8,9 @@ import SignInAndSignUp from './pages/signIn-and-signUp/signIn-and-signUp.compone
 import {auth, createUserProfileDocument} from './firebase/firebase.utils';
 import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/user.action';
-import FormikFormPage from "./pages/formikFormPage/formikFormPage.component";
-
+import FormikFormPage from './pages/formikFormPage/formikFormPage.component';
+import FriendList from './components/formikFieldArray/fieldArray.component';
+import FinalFormPage from './pages/finalFormPage/finalFormPage.component';
 class App extends React.Component {
     // constructor() {
     //     super();
@@ -54,6 +55,8 @@ class App extends React.Component {
                     <Route exact path='/employee-filter' element={<EmployeeFilter />}/>
                     <Route exact path='/sign-in' element={<SignInAndSignUp />}/>
                     <Route exact path='/formik-form' element={<FormikFormPage />}/>
+                    <Route exact path='/field-array' element={<FriendList />}/>
+                    <Route exact path='/final-form' element={<FinalFormPage />}/>
                     {/*<Route exact path='/sign-in'*/}
                     {/*       render={() => this.props.currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUp/>)}/>*/}
                 </Routes>
