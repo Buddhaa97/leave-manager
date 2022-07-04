@@ -21,5 +21,5 @@ const Circle = styled.i`
   line-height: ${size}px;
   border-radius: ${size / 2}px;
   border: 1px solid #ddd;
-  background: black;
+  background: #eee;
 `

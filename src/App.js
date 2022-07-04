@@ -11,6 +11,10 @@ import {setCurrentUser} from './redux/user/user.action';
 import FormikFormPage from './pages/formikFormPage/formikFormPage.component';
 import FriendList from './components/formikFieldArray/fieldArray.component';
 import FinalFormPage from './pages/finalFormPage/finalFormPage.component';
+import RecordLevelPageComponent from './pages/finalFormPage/recordLevelPage/recordLevelPage.component';
+import Counter from './RTK-react-redux/feature/counter/counter';
+import Error from './components/errorBoundry/errorBoundry.component';
+
 class App extends React.Component {
     // constructor() {
     //     super();
@@ -57,6 +61,9 @@ class App extends React.Component {
                     <Route exact path='/formik-form' element={<FormikFormPage />}/>
                     <Route exact path='/field-array' element={<FriendList />}/>
                     <Route exact path='/final-form' element={<FinalFormPage />}/>
+                    <Route exact path='/record-level' element={<RecordLevelPageComponent />}/>
+                    <Route exact path='/error' element={<Error />}/>
+                    {/*<Route exact path='/redux-example' element={<Counter />}/>*/}
                     {/*<Route exact path='/sign-in'*/}
                     {/*       render={() => this.props.currentUser ? (<Redirect to='/'/>) : (<SignInAndSignUp/>)}/>*/}
                 </Routes>

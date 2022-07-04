@@ -1,10 +1,9 @@
 import React from 'react';
+import HomePageComponent from '../../components/homepage/homepage.component';
 
-function HomePage () {
-    return (
-        <div>
-            <h1>Hello Home</h1>
-        </div>
-    )
-}
+const HomePage = () => (
+    <div>
+       <HomePageComponent />
+    </div>
+)
 export default HomePage;

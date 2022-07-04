@@ -12,15 +12,13 @@ const onSubmit = async values => {
 const required = value => (value ? undefined : 'Required')
 
 const MyForm = ({ subscription }) => (
-    <Form
+    <Form //On mount, <Form/> creates a Final Form form instance, subscribes to changes on that form, and places it into the React Context so that the <Field/> components can see it.
         onSubmit={onSubmit}
         subscription={subscription}
         render={({ handleSubmit, form, submitting, pristine, values }) => (
             <form onSubmit={handleSubmit}>
-                {console.log('renders')}
-                <RenderCount />
-                <Field name="firstName" validate={required}>
-                    {({ input, meta }) => (
+                <Field name="firstName" validate={required} type="checkbox">
+                    {({ input, meta }) => (//https://final-form.org/docs/react-final-form/types/FieldRenderProps
                         <div>
                             <RenderCount />
                             <label>First Name</label>
@@ -51,21 +49,21 @@ const MyForm = ({ subscription }) => (
                         Reset
                     </button>
                 </div>
-                {values ? (
-                    <pre>
-                <RenderCount/>
-                        {/*{JSON.stringify(values, 0, 2)}*/}
-                    </pre>
-                ) : (
-                    <FormSpy subscription={{ values: true }}>
-                        {({ values }) => (
-                            <pre>
-                <RenderCount/>
-                                {/*{JSON.stringify(values, 0, 2)}*/}
-              </pre>
-                        )}
-                    </FormSpy>
-                )}
+              {/*  {values ? (*/}
+              {/*      <pre>*/}
+              {/*  <RenderCount/>*/}
+              {/*          /!*{JSON.stringify(values, 0, 2)}*!/*/}
+              {/*      </pre>*/}
+              {/*  ) : (*/}
+              {/*      <FormSpy subscription={{ values: true }}>*/}
+              {/*          {({ values }) => (*/}
+              {/*              <pre>*/}
+              {/*  <RenderCount/>*/}
+              {/*                  /!*{JSON.stringify(values, 0, 2)}*!/*/}
+              {/*</pre>*/}
+              {/*          )}*/}
+              {/*      </FormSpy>*/}
+              {/*  )}*/}
             </form>
         )}
     />
